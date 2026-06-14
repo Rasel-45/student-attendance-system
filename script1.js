@@ -1,5 +1,5 @@
 var user="admin";
-var pass="4545";
+var pass="0245";
 
 function login(){
 
