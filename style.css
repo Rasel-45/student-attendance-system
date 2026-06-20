@@ -26,7 +26,14 @@ h1{
     margin-bottom: 20px;
     font-size: 16px;
 }
+#dayName{
+    margin-left: 10px;
+    font-weight: bold;
+}
 
+.red-day{
+    color: red;
+}
 .date-section input{
     padding: 5px;
     font-size: 16px;
