@@ -22,7 +22,29 @@ function setTodayDate() {
     const today = new Date().toISOString().split("T")[0];
     dateInput.value = today;
 
-    dateInput.addEventListener("change", displayStudents);
+    showDay();
+
+    dateInput.addEventListener("change", () => {
+        showDay();
+        displayStudents();
+    });
+}
+
+function showDay() {
+    const date = new Date(dateInput.value);
+
+    const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+    ];
+
+    document.getElementById("dayName").innerText =
+        "Day: " + days[date.getDay()];
 }
 
 // Save Data
