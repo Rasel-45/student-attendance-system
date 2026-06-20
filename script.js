@@ -43,10 +43,17 @@ function showDay() {
         "Saturday"
     ];
 
-    document.getElementById("dayName").innerText =
-        "Day: " + days[date.getDay()];
-}
+    const dayName = days[date.getDay()];
+    const dayElement = document.getElementById("dayName");
 
+    dayElement.innerHTML = " (" + dayName + ")";
+
+    if (dayName === "Friday" || dayName === "Saturday") {
+        dayElement.classList.add("red-day");
+    } else {
+        dayElement.classList.remove("red-day");
+    }
+}
 // Save Data
 function saveData() {
     localStorage.setItem("students", JSON.stringify(students));
